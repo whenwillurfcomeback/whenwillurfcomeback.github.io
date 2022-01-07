@@ -18,11 +18,13 @@ and (max-device-width : 480px) {
         margin: 0;
     }
 
-    .countdown-timer { 
-        padding-top: 3.7rem;
-        font-size: 22px;
+    .countdown-timer {
+        padding-bottom: .2rem;
+        font-size: 16px;
     }
+
     .countdown-wrapper {
+        padding-top: 3.8rem;
         height: 200px;
         max-height: 200px;
         max-width: 100%;
@@ -39,11 +41,14 @@ and (min-device-width : 480px)  {
     body {
         font-size: 44px;
     }
-    .countdown-timer { 
-        padding-top: 5rem;
-        font-size: 30px;
+
+    .countdown-timer {
+        padding-bottom: .5rem;
+        font-size: 26px;
     }
+
     .countdown-wrapper {
+        padding-top: 3.7rem;
         height: 253px;
         max-height: 253px;
         max-width: 100%;

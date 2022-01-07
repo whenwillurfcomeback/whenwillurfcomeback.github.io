@@ -13,11 +13,18 @@
         <h1>When will URF come back?</h1>
         <div class="countdown-wrapper">
             <div class="countdown-timer">
-                <div>Approx. in:</div>
-                <span id="days">00</span><span class="field-text">Days</span>
-                <span id="hours">00</span><span class="field-text">Hours</span>
-                <span id="minutes">00</span><span class="field-text">Minutes</span>
-                <span id="seconds">00</span><span class="field-text">Seconds</span>
+                <div>The Real URF approx. in:</div>
+                <span id="days-normal">00</span><span class="field-text">Days</span>
+                <span id="hours-normal">00</span><span class="field-text">Hours</span>
+                <span id="minutes-normal">00</span><span class="field-text">Minutes</span>
+                <span id="seconds-normal">00</span><span class="field-text">Seconds</span>
+            </div>
+            <div class="countdown-timer">
+                <div>ARURF approx. in:</div>
+                <span id="days-ar">00</span><span class="field-text">Days</span>
+                <span id="hours-ar">00</span><span class="field-text">Hours</span>
+                <span id="minutes-ar">00</span><span class="field-text">Minutes</span>
+                <span id="seconds-ar">00</span><span class="field-text">Seconds</span>
             </div>
         </div>
 
@@ -38,26 +45,34 @@
 
 
     <script>
-        var finalCountdown = new Date('2022-10-05T00:00:00').getTime();
+        var finalCountdownURF = new Date('2022-10-05T00:00:00').getTime();
+        var ARURFshit = new Date('2022-01-20T00:00:00').getTime();
 
-        var interval = setInterval(function() {
-            var now = new Date().getTime();
-            var timeToUrf = finalCountdown - now;
-                
-            var daysToUrf = Math.floor(timeToUrf / (1000 * 60 * 60 * 24));
-            var hoursToUrf = Math.floor((timeToUrf % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            var minutesToUrf = Math.floor((timeToUrf % (1000 * 60 * 60)) / (1000 * 60));
-            var secondsToUrf = Math.floor((timeToUrf % (1000 * 60)) / 1000);
+        runCountdown("-normal", finalCountdownURF);
+        runCountdown("-ar", ARURFshit);
 
-            setCountdownFields(daysToUrf, hoursToUrf, minutesToUrf, secondsToUrf);
-        }, 1000);
+        function runCountdown(suffix, date) {
+            var interval = setInterval(function() {
+                var now = new Date().getTime();
+                var timeToUrf = date - now;
 
-        function setCountdownFields(days, hours, minutes, seconds) {
-            document.getElementById("days").innerHTML = days
-            document.getElementById("hours").innerHTML = hours
-            document.getElementById("minutes").innerHTML = minutes 
-            document.getElementById("seconds").innerHTML = seconds
+                var daysToUrf = Math.floor(timeToUrf / (1000 * 60 * 60 * 24));
+                var hoursToUrf = Math.floor((timeToUrf % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                var minutesToUrf = Math.floor((timeToUrf % (1000 * 60 * 60)) / (1000 * 60));
+                var secondsToUrf = Math.floor((timeToUrf % (1000 * 60)) / 1000);
+
+                setCountdownFields(daysToUrf, hoursToUrf, minutesToUrf, secondsToUrf);
+            }, 1000);
+
+            function setCountdownFields(days, hours, minutes, seconds) {
+                document.getElementById("days" + suffix).innerHTML = days
+                document.getElementById("hours" + suffix).innerHTML = hours
+                document.getElementById("minutes" + suffix).innerHTML = minutes
+                document.getElementById("seconds" + suffix).innerHTML = seconds
+            }
         }
+
+
 
     </script>
 </body>
