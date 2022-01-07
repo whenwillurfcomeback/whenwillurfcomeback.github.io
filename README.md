@@ -5,3 +5,6 @@ This page indicates an approximate countdown to the most (and probably only time
 
 ## Assets
 All assets were borrowed on: [Font](https://thefontsmagazine.com/font/league-of-legends-font/), [Background](https://mocah.org/4554654-ultra-rapid-fire-poro.html). [Logo](https://www.pngkit.com/view/u2t4r5r5y3o0i1y3_league-of-legends-blank-logo-by-miss-carolann/)
+
+## Click History
+![Click History](https://hits.seeyoufarm.com/api/count/graph/dailyhits.svg?url=whenwillurfcomeback.github.io)
