@@ -14,13 +14,25 @@ and (max-device-width : 480px) {
         font-size: 32px;
     }
 
+    h1 {
+        margin: 0;
+    }
+
     .countdown-timer { 
-        padding-top: 5rem;
+        padding-top: 3.7rem;
         font-size: 22px;
     }
     .countdown-wrapper {
+        height: 200px;
+        max-height: 200px;
+        max-width: 100%;
         background-size: 100%;
     }
+
+    .news {
+        margin: 0 1rem;
+    }
+
 }
 @media only screen 
 and (min-device-width : 480px)  {
@@ -32,7 +44,14 @@ and (min-device-width : 480px)  {
         font-size: 30px;
     }
     .countdown-wrapper {
+        height: 253px;
+        max-height: 253px;
+        max-width: 100%;
         background-size: auto;
+    }
+
+    .news {
+        margin: 2rem 4rem 0rem 4rem;
     }
 }
 
@@ -66,9 +85,6 @@ body {
 }
 
 .countdown-wrapper {
-    height: 253px;
-    max-height: 253px;
-    max-width: 100%;
     background-image: url("./assets/logo.png");
     background-repeat: no-repeat;
     background-position: center;
@@ -82,4 +98,52 @@ body {
     position: fixed;
     bottom: 10px;
     right: 20px;
+}
+
+
+
+h2 {
+    font-size: 32px;
+}
+
+a {
+    color: #72a2f8;
+    text-decoration: none;
+}
+
+strong  {
+    font-family: 'lol_regular';
+    color: #dcc375;
+    text-shadow: 4px 4px 0px rgba(0,0,0,0.3), 0 0 2px #000;
+}
+
+.news {
+    background-color: rgba(40,40,40, .7);
+    border: 4px solid #dcc375;
+    text-align: left;
+    font-family: Roboto;
+}
+
+.article {
+    border-bottom: 1px solid gray;
+    margin: 1rem 1rem;
+    padding-bottom: 1rem;
+    text-shadow: none;
+}
+
+.article-title {
+    font-family: 'lol_regular';
+    text-shadow: 4px 4px 0px rgba(0,0,0,0.3), 0 0 2px #000;
+}
+
+.article-text {
+    color: white;
+
+    font-size: 22px;
+}
+
+.article-source {
+    margin-top: 1rem;
+    color: white;
+    font-size: 16px;
 }
