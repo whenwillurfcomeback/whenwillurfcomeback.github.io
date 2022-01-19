@@ -88,15 +88,15 @@
             function setCountdownFields(days, hours, minutes, seconds) {
                 if (days < 0) {
                     document.getElementById("sub-title" + suffix).innerHTML = "overdue since"
-                    document.getElementById("days" + suffix).innerHTML = -days
-                    document.getElementById("hours" + suffix).innerHTML = -hours
-                    document.getElementById("minutes" + suffix).innerHTML = -minutes
-                    document.getElementById("seconds" + suffix).innerHTML = -seconds
+                    document.getElementById("days" + suffix).innerHTML = -days - 1;
+                    document.getElementById("hours" + suffix).innerHTML = -hours - 1;
+                    document.getElementById("minutes" + suffix).innerHTML = -minutes - 1;
+                    document.getElementById("seconds" + suffix).innerHTML = -seconds;
                 } else {
-                    document.getElementById("days" + suffix).innerHTML = days
-                    document.getElementById("hours" + suffix).innerHTML = hours
-                    document.getElementById("minutes" + suffix).innerHTML = minutes
-                    document.getElementById("seconds" + suffix).innerHTML = seconds
+                    document.getElementById("days" + suffix).innerHTML = days;
+                    document.getElementById("hours" + suffix).innerHTML = hours;
+                    document.getElementById("minutes" + suffix).innerHTML = minutes;
+                    document.getElementById("seconds" + suffix).innerHTML = seconds;
                 }
             }
         }
