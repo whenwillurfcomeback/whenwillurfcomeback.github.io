@@ -30,14 +30,14 @@
                             <th>Seconds</th>
                         </tr>
                         <tr class="countdown-row">
-                            <td><strong>Real URF</strong></td>
+                            <td><strong>Real URF</strong><div id="sub-title-normal"></div></td>
                             <td id="days-normal">00</td>
                             <td id="hours-normal">00</td>
                             <td id="minutes-normal">00</td>
                             <td id="seconds-normal">00</td>
                         </tr>
                         <tr class="countdown-row">
-                            <td><strong>ARURF</strong></td>
+                            <td><strong>ARURF</strong><div id="sub-title-ar"></div></td>
                             <td id="days-ar">00</td>
                             <td id="hours-ar">00</td>
                             <td id="minutes-ar">00</td>
@@ -86,10 +86,18 @@
             }, 1000);
 
             function setCountdownFields(days, hours, minutes, seconds) {
-                document.getElementById("days" + suffix).innerHTML = days
-                document.getElementById("hours" + suffix).innerHTML = hours
-                document.getElementById("minutes" + suffix).innerHTML = minutes
-                document.getElementById("seconds" + suffix).innerHTML = seconds
+                if (days < 0) {
+                    document.getElementById("sub-title" + suffix).innerHTML = "overdue since"
+                    document.getElementById("days" + suffix).innerHTML = -days
+                    document.getElementById("hours" + suffix).innerHTML = -hours
+                    document.getElementById("minutes" + suffix).innerHTML = -minutes
+                    document.getElementById("seconds" + suffix).innerHTML = -seconds
+                } else {
+                    document.getElementById("days" + suffix).innerHTML = days
+                    document.getElementById("hours" + suffix).innerHTML = hours
+                    document.getElementById("minutes" + suffix).innerHTML = minutes
+                    document.getElementById("seconds" + suffix).innerHTML = seconds
+                }
             }
         }
 
