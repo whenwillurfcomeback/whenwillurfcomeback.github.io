@@ -37,11 +37,12 @@
                             <td id="seconds-normal">00</td>
                         </tr>
                         <tr class="countdown-row">
+
                             <td><strong>ARURF</strong><div id="sub-title-ar"></div></td>
-                            <td id="days-ar">00</td>
-                            <td id="hours-ar">00</td>
-                            <td id="minutes-ar">00</td>
-                            <td id="seconds-ar">00</td>
+                            <td id="days-ar"><strong>L</strong></td>
+                            <td id="hours-ar"><strong>I</strong></td>
+                            <td id="minutes-ar"><strong>V</strong></td>
+                            <td id="seconds-ar"><strong>E</strong></td>
                         </tr>
                     </table>
                 </div>
@@ -50,6 +51,11 @@
         </div>
 
         <div class="news">
+            <div class="article">
+                <h2 class="article-title">26 January 2022 - ARURF Live</h2>
+                <div class="article-text">ARURF is live, may the Manatees randomness be with you.</div>
+            </div>
+
             <div class="article">
                 <h2 class="article-title">20 January 2022 - ARURF delayed</h2>
                 <div class="article-text">ARURF will be delayed by a week and will be avaliable from <strong>26 January 2022</strong>.</div>
@@ -75,7 +81,7 @@
 
     <script>
         var finalCountdownURF = new Date('2022-10-05T00:00:00').getTime();
-        var ARURFshit = new Date('2022-01-26T00:00:00').getTime();
+        // var ARURFshit = new Date('2022-01-26T00:00:00').getTime();
 
         runCountdown("-normal", finalCountdownURF);
         runCountdown("-ar", ARURFshit);
