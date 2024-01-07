@@ -36,14 +36,6 @@
                             <td id="minutes-normal"><strong>V</strong></td>
                             <td id="seconds-normal"><strong>E</strong></td>
                         </tr>
-                        <tr class="countdown-row">
-
-                            <td><strong>ARURF</strong><div id="sub-title-ar"></div></td>
-                            <td id="days-ar"><strong>L</strong></td>
-                            <td id="hours-ar"><strong>I</strong></td>
-                            <td id="minutes-ar"><strong>V</strong></td>
-                            <td id="seconds-ar"><strong>E</strong></td>
-                        </tr>
                     </table>
                 </div>
             </div>
@@ -51,6 +43,12 @@
         </div>
 
         <div class="news">
+            <div class="article">
+                <h2 class="article-title">07 January 2024 - The fun comes back </h2>
+                <div class="article-text">Once again Riot gives us some hope. We'll meet the Manatee on <strong>07 February 2022</strong></div>
+                <div class="article-source">Source: <a href="https://www.reddit.com/r/Urf/comments/190kgjq/urf_date_26_january_pbe_7_febuary_normal_server/">Our beloved subreddit</a> </div>
+            </div>
+
             <div class="article">
                 <h2 class="article-title">15 November 2022 - The fun is over </h2>
                 <div class="article-text">You're here because you're sad, angry and lost and that is ok. We may just uninstall the game until Riot allows us to have fun again.</div>
@@ -104,11 +102,9 @@
 
 
     <script>
-        var finalCountdownURF = new Date('2023-09-29T00:00:00').getTime();
-        var ARURFshit = new Date('2023-05-11T00:00:00').getTime();
+        var finalCountdownURF = new Date('2024-02-07T00:00:00').getTime();
 
         runCountdown("-normal", finalCountdownURF);
-        runCountdown("-ar", ARURFshit);
 
         function runCountdown(suffix, date) {
 
